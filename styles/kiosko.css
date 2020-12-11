@@ -69,16 +69,14 @@ body, html {
 
 .capsule_1_container {
     position: absolute;
-    margin-left: 38vh;
-    margin-top: 57vh;
+    left: 60%;
+    top: 60%;
     /* flex */
     display: flex;
 }
 .capsule_1 {
     position: static;
     width: 15vh;
-    /* margin-left: 38vh; */
-    /* margin-top: 57vh; */
     filter: brightness(70%);
     cursor: pointer;
     z-index: 2;
@@ -86,8 +84,8 @@ body, html {
 
 .capsule_2_container {
     position: absolute;
-    margin-left: -21vh;
-    margin-top: 48vh;
+    left: 45%;
+    top: 50%;
     /* flex */
     display: flex;
 }
@@ -101,8 +99,8 @@ body, html {
 
 .capsule_3_container {
     position: absolute;
-    margin-left: -61vh;
-    margin-top: 67vh;
+    left: 30%;
+    top: 65%;
     /* flex */
     display: flex;
 }
@@ -116,8 +114,8 @@ body, html {
 
 .capsule_4_container {
     position: absolute;
-    margin-left: -116vh;
-    margin-top: 63vh;
+    left: 20%;
+    top: 62%;
     /* flex */
     display: flex;
 }
@@ -131,8 +129,8 @@ body, html {
 
 .capsule_5_container {
     position: absolute;
-    margin-left: -132vh;
-    margin-top: 44vh;
+    left: 13%;
+    top: 45%;
     /* flex */
     display: flex;
 }
@@ -153,8 +151,6 @@ body, html {
     background-color: #266da8;
     border-radius: 5px;
     width: 100px;
-    /* height: 30px; */
-    /* line-height: 30px; */
     padding: 1vh 5px;
     font-size: 14px;
     text-align: center;
@@ -210,7 +206,11 @@ body, html {
 
 
 
-
+.capsule_container {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 
 
@@ -223,8 +223,6 @@ body, html {
 @media (min-width: 2450px) {
     .capsule_tag {
         width: 180px;
-        /* height: 50px; */
-        /* line-height: 50px; */
         font-size: 26px;
     }
 }
@@ -252,8 +250,6 @@ body, html {
 @media (min-width: 768px) and (max-width: 1024px) {
     .capsule_tag {
         width: 90px;
-        /* height: 25px; */
-        /* line-height: 25px; */
         font-size: 13px;
     }
 }
@@ -274,8 +270,6 @@ body, html {
 @media (min-width: 481px) and (max-width: 767px) {
     .capsule_tag {
         width: 80px;
-        /* height: 25px; */
-        /* line-height: 25px; */
         font-size: 12px;
     }
 }
@@ -288,8 +282,6 @@ body, html {
 @media (min-width: 320px) and (max-width: 480px) {
     .capsule_tag {
         width: 75px;
-        /* height: 20px; */
-        /* line-height: 20px; */
         font-size: 11px;
     }
 }

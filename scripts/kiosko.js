@@ -1,5 +1,4 @@
 function start() {
-
     // setear links
     for (let i = 1; i <= 5; i++) {
         document.getElementsByClassName(`capsule_${i}`)[0].addEventListener('click', function() {
@@ -13,7 +12,7 @@ function start() {
         return 20*(window.innerWidth/1920) + Math.floor((30*(window.innerWidth/1920) - 20*(window.innerWidth/1920)) * Math.random());
     }
     function bubblePosition() {
-        return Math.random() * 40 + "px"
+        return Math.random() * 50*(window.innerWidth/1920) + "px"
     }
     const capsule = document.getElementsByClassName('capsule');
     for (let i = 0; i < capsule.length; i++) {
