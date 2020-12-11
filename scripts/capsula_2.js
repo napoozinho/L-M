@@ -1,6 +1,7 @@
 const ice_1 = document.getElementById('ice_1');
 const ice_2 = document.getElementById('ice_2');
 const capsule_2_line_1 = document.getElementById('capsule_2_line_1');
+const capsule_2_ended = document.getElementById('capsule_2_ended');
 const cig = document.getElementsByClassName('c2_cig')[0];
 const titulo = document.getElementsByClassName('titulo')[0];
 const descripcion_1 = document.getElementsByClassName('descripcion_1')[0];
@@ -57,5 +58,13 @@ function start() {
                 titulo.classList.add('titulo_animation_slide')
             }, 500);
         }, 11000);
+
+        capsule_2_line_1.addEventListener('ended', function(ev) {
+            setTimeout(() => {
+                capsule_2_end.pause();
+                capsule_2_end.currentTime = 0;
+                capsule_2_end.play();
+            }, 300);
+        })
     }, 200);
 }

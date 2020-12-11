@@ -1,6 +1,7 @@
 const ice_1 = document.getElementById('ice_1');
 const ice_2 = document.getElementById('ice_2');
 const capsule_1_line_1 = document.getElementById('capsule_1_line_1');
+const capsule_1_end = document.getElementById('capsule_1_end');
 const c1_nuevo = document.getElementsByClassName('c1_nuevo')[0];
 const descripcion_1 = document.getElementsByClassName('descripcion_1')[0];
 const descripcion_2 = document.getElementsByClassName('descripcion_2')[0];
@@ -35,5 +36,12 @@ function start() {
             }, 5000);
         }, 3500);
         
+        capsule_1_line_1.addEventListener('ended', function(ev) {
+            setTimeout(() => {
+                capsule_1_end.pause();
+                capsule_1_end.currentTime = 0;
+                capsule_1_end.play();
+            }, 300);
+        })
     }, 200);
 }
