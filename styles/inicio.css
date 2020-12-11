@@ -215,3 +215,22 @@ body, html {
     transform: scale(1);
     opacity: 1;
 }
+
+
+.disclaimer {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    padding: 2vh 0;
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    font-family: "Arial Narrow", Arial, sans-serif;
+    font-size: 3vh;
+    letter-spacing: 0.2em;
+    /* flex */
+    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

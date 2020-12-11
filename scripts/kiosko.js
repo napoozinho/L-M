@@ -18,7 +18,6 @@ function start() {
     for (let i = 0; i < capsule.length; i++) {
         if (capsule[i].children[0].classList.contains('active')) {
             var active_capsule = `.capsule_${i+1}_container`
-            
         }
     }
     function createBubble() {
@@ -46,5 +45,5 @@ function start() {
     }
 
     // repetidor de bubbles
-    setInterval(createBubble, 133)
+    // setInterval(createBubble, 133)
 }
