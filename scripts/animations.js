@@ -20,7 +20,7 @@ var listener_transition = setInterval(check, 500)
 
 // mostrar segundo segundo
 line_1.addEventListener('ended', function(ev){
-    console.log("line_1 Ended");
+    // console.log("line_1 Ended");
     skip.classList.remove('noDisplay');
     
     cambiarTexto();
@@ -41,7 +41,7 @@ function cambiarTexto() {
 
 // mostrar tercer texto y nuevo mr open
 line_2.addEventListener('ended', function(ev){
-    console.log("line_2 Ended");
+    // console.log("line_2 Ended");
     texto.classList.remove('transition')
     
     setTimeout(() => {
@@ -55,7 +55,7 @@ line_2.addEventListener('ended', function(ev){
 
 // mostrar "empecemos"
 line_3.addEventListener('ended', function(ev){
-    console.log("line_3 Ended");
+    // console.log("line_3 Ended");
     empecemos.classList.remove('noDisplay')
     
     setTimeout(() => {
@@ -70,7 +70,7 @@ line_4.addEventListener('ended', function(ev){
         overlay.classList.add('overlay_darken');
     }, 2000);
     setTimeout(() => {
-        console.log("line_4 Ended");
+        // console.log("line_4 Ended");
         line_1.pause();
             line_2.pause();
             line_3.pause();

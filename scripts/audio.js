@@ -16,14 +16,13 @@ const music = document.getElementById('music')
 // Reproducir primer audio
 function check() {
     if(isReady) { 
-        console.log("AUDIO START")
+        // console.log("AUDIO START")
         music.pause();
         music.currentTime = 0;
         music.volume = 0.05;
         music.play();
         clearInterval(listener_audio);
         setTimeout(() => {
-            console.log(line_1)
             line_1.pause();
             line_1.currentTime = 0;
             line_1.play();
@@ -34,7 +33,7 @@ var listener_audio = setInterval(check, 500)
 
 // Reproducir segundo audio
 line_1.addEventListener('ended', function(ev){
-    console.log("line_1 Ended");
+    // console.log("line_1 Ended");
     setTimeout(() => {
         line_2.pause();
         line_2.currentTime = 0;
@@ -51,7 +50,7 @@ line_1.addEventListener('ended', function(ev){
 
 // Reproducir primer tercer
 line_2.addEventListener('ended', function(ev){
-    console.log("line_2 Ended");
+    // console.log("line_2 Ended");
     setTimeout(() => {
         line_3.pause();
         line_3.currentTime = 0;
@@ -71,7 +70,7 @@ line_2.addEventListener('ended', function(ev){
 
 
 line_3.addEventListener('ended', function(ev){
-    console.log("line_3 Ended");
+    // console.log("line_3 Ended");
     setTimeout(() => {
         line_4.pause();
         line_4.currentTime = 0;
