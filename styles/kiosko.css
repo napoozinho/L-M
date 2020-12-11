@@ -186,6 +186,27 @@ body, html {
 }
 
 
+.mr_open_container {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    /* flex */
+    display: flex;
+    justify-content: center;
+}
+.mr_open {
+    position: relative;
+    width: 45vh;
+    margin-bottom: 5vh;
+}
+.mr_open_text {
+    position: relative;
+    width: 26vh;
+    margin-left: -3vh;
+    margin-right: 1vh;
+    /* flex */
+    align-self: flex-start;
+}
 
 
 

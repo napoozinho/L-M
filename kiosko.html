@@ -7,18 +7,35 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="styles/kiosko.css">
     <link rel="stylesheet" href="styles/spinner.css">
+    <link rel="stylesheet" href="styles/capsule_emmiter.css">
     <link rel="icon" href="images/favicon.png">
 </head>
 <body>
-
-    <audio id="line_4" src="audio/line_4.mp3"></audio>
-
     <div id="CARGANDO" class="lds-ring"><div></div><div></div><div></div><div></div></div>
     
     <div class="kiosko noDisplay">
 
+        <div class="mr_open_container">            
+            <img class="mr_open noDrag" src="images/mr_open_kiosko.png" alt="">
+
+            <!-- QUITAR class="noDisplay" A LOS <img> PARA MOSTRAR EL TEXTO QUE CORRESPONDE -->
+            <!-- ACTUALMENTE SOLO EL TEXTO 1 SE ESTÁ MOSTRANDO. AGREGAR class="noDisplay" CUANDO SE PASE A OTRO TEXTO -->
+
+            <!-- texto 1/5 -->
+            <img class="mr_open_text noDrag " src="images/kiosko_text_1.png" alt='Comenzá tu aventura apretando la cápsula de "Nuevo L&M Forward"'>
+            <!-- texto 2/5 -->
+            <img class="mr_open_text noDrag noDisplay" src="images/kiosko_text_2.png" alt='Continua tu aventura apretando la cápsula de "A quién ofrecerlo"'>
+            <!-- texto 3/5 -->
+            <img class="mr_open_text noDrag noDisplay" src="images/kiosko_text_3.png" alt='Continua tu aventura apretando la cápsula de "Familia L&M"'>
+            <!-- texto 4/5 -->
+            <img class="mr_open_text noDrag noDisplay" src="images/kiosko_text_4.png" alt='Continua tu aventura apretando la cápsula de "Herramientas"'>
+            <!-- texto 5/5 -->
+            <img class="mr_open_text noDrag noDisplay" src="images/kiosko_text_5.png" alt='Finaliza tu aventura apretando la cápsula de "Firmá el compromiso"'>
+        </div>
+
         <!-- AGREGAR class="active" A LOS <img> Y <p> (HIJOS DEL <div class="capsule_x_container capsule">) PARA DEFINIR LA CAPSULA POR LA QUE DEBE CONTINUAR -->
         <!-- ACTUALMENTE SOLO LA CAPSULA 1 ESTÁ ACTIVA. QUITAR class="active" CUANDO SE PASE A OTRA CAPSULA -->
+        <!-- LOS TEXTOS Y LAS CAPSULAS DEBEN ESTAR SINCRONIZADAS (text_1 con capsule_1, text_2 con capsule_2, etc...) -->
 
         <!-- capsula 1/5 -->
         <div class="capsule_1_container capsule">
@@ -57,7 +74,13 @@
         }
         preload(
             "images/bkg_kiosko.png",
-            "images/capsule.png"
+            "images/capsule.png",
+            "images/mr_open_kiosko.png",
+            "images/kiosko_text_1.png",
+            "images/kiosko_text_2.png",
+            "images/kiosko_text_3.png",
+            "images/kiosko_text_4.png",
+            "images/kiosko_text_5.png"
         )
 
         window.addEventListener('load', function () {
@@ -65,11 +88,10 @@
             document.getElementById('CARGANDO').classList.add('noDisplay')
             const body = document.getElementsByClassName('kiosko')[0];
             body.classList.remove('noDisplay');
+            start();
         })
     </script>
-
-    <script src="scripts/audio_kiosko.js"></script>
-    <script src="scripts/capsulas_href.js"></script>
+    <script src="scripts/kiosko.js"></script>
 
 </body>
 </html>
