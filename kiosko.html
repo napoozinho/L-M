@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kiosko</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="styles/kiosko.css">
+    <link rel="stylesheet" href="styles/spinner.css">
+    <link rel="icon" href="images/bubble.png">
+</head>
+<body>
+
+    <audio id="line_4" src="audio/line_4.mp3"></audio>
+
+    <div id="CARGANDO" class="lds-ring"><div></div><div></div><div></div><div></div></div>
+    
+    <div class="kiosko noDisplay">
+
+        <!-- AGREGAR class="active" A LOS <img> Y <p> (HIJOS DEL <div class="capsule_x_container capsule">) PARA DEFINIR LA CAPSULA POR LA QUE DEBE CONTINUAR -->
+        <!-- ACTUALMENTE SOLO LA CAPSULA 1 ESTÁ ACTIVA. QUITAR class="active" CUANDO SE PASE A OTRA CAPSULA -->
+
+        <!-- capsula 1/5 -->
+        <div class="capsule_1_container capsule">
+            <img class="capsule_1 noDrag active" src="images/capsule.png" alt=".">
+            <p class="capsule_tag active">Capsula 1/5</p>
+        </div>
+        <!-- capsula 2/5 -->
+        <div class="capsule_2_container capsule">
+            <img class="capsule_2 noDrag" src="images/capsule.png" alt=".">
+            <p class="capsule_tag">Capsula 2/5</p>
+        </div>
+        <!-- capsula 3/5 -->
+        <div class="capsule_3_container capsule">
+            <img class="capsule_3 noDrag" src="images/capsule.png" alt=".">
+            <p class="capsule_tag">Capsula 3/5</p>
+        </div>
+        <!-- capsula 4/5 -->
+        <div class="capsule_4_container capsule">
+            <img class="capsule_4 noDrag" src="images/capsule.png" alt=".">
+            <p class="capsule_tag">Capsula 4/5</p>
+        </div>
+        <!-- capsula 5/5 -->
+        <div class="capsule_5_container capsule">
+            <img class="capsule_5 noDrag" src="images/capsule.png" alt=".">
+            <p class="capsule_tag">Capsula 5/5</p>
+        </div>
+    </div>
+
+    <script>
+        var images = [];
+        function preload() {
+            for (var i = 0; i < arguments.length; i++) {
+                images[i] = new Image();
+                images[i].src = preload.arguments[i];
+            }
+        }
+        preload(
+            "images/bkg_kiosko.png",
+            "images/capsule.png"
+        )
+
+        window.addEventListener('load', function () {
+            console.log( "window loaded" );
+            document.getElementById('CARGANDO').classList.add('noDisplay')
+            const body = document.getElementsByClassName('kiosko')[0];
+            body.classList.remove('noDisplay');
+        })
+    </script>
+
+    <script src="scripts/audio_kiosko.js"></script>
+    <script src="scripts/capsulas_href.js"></script>
+
+</body>
+</html>

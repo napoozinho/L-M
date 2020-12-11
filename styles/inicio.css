@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: black;
+}
+body, html {
+    overflow: hidden;
+    height: 100%;
+}
+@font-face {
+    src: url(../fonts/OpenSans-Bold.ttf);
+    font-family: 'OpenSans-Bold';
+}
+@font-face {
+    src: url(../fonts/FuturaStd-ExtraBold.otf);
+    font-family: 'FuturaStd-ExtraBold';
+}
+
+
+#comenzar {
+    background-image: url('../images/bkg_inicio.png');
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* flex */
+    display: flex;
+    justify-content: center;
+}
+#btn {
+    align-self: center;
+    width: 146px;
+    height: 48px;
+    font-family: 'OpenSans-Bold';
+    font-size: 14px;
+    line-height: 16px;
+    background: #ffffff;
+    color: #266da8;
+    letter-spacing: 0;
+    padding: 16px 32px;
+    border-radius: 25px;
+    box-shadow: 0px 10px 20px rgba(13, 40, 61, 0.05);
+    border: none;
+    cursor: pointer;
+    padding: 16px 32px !important;
+    transition: transform 0.1s linear;
+}
+#btn:hover {
+    transform: translate(0px, -2px);
+}
+
+.noDisplay {
+    display: none !important;
+}
+
+.noDrag {
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+.skip {
+    position: absolute;
+    width: 20vh;
+    z-index: 10;
+    top: -2vh;
+    right: 2vh;
+    opacity: 0;
+    cursor: pointer;
+    filter: brightness(80%);
+    transition: filter 0.2s linear, opacity 1s ease-in-out, top 0.5s cubic-bezier(0.57, 0.92, 0.55, 1.15);
+}
+.skip_fade {
+    opacity: 1 !important;
+    top: 2vh;
+}
+.skip:hover {
+    filter: brightness(100%);
+}
+
+.welcome_container {
+    background-image: url('../images/bkg_inicio.png');
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    /* flex */
+    display: flex;
+    justify-content: center;
+}
+.overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #000000;
+    z-index: 5;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+.overlay_darken {
+    opacity: 1;
+}
+.mr_open_container {
+    position: relative;
+    margin-top: 10vh;
+    z-index: 3;
+    /* flex */
+    align-self: center;
+}
+.mr_open {
+    height: 80vh;
+}
+.mr_open_text_1 {
+    position: absolute;
+    height: 18vh;
+    margin-top: 6vh;
+    margin-left: -1vh;
+    z-index: 2;
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity ease-in 0.7s, transform ease-in-out 0.7s;
+    -webkit-filter: drop-shadow(0px 0px 20px #3f71b85e)
+}
+.mr_open_text_2 {
+    position: absolute;
+    height: 25vh;
+    margin-top: 2vh;
+    margin-left: -1vh;
+    z-index: 2;
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity ease-in 0.7s, transform ease-in-out 0.7s;
+    -webkit-filter: drop-shadow(0px 0px 20px #3f71b85e)
+}
+.mr_open_text_3 {
+    position: absolute;
+    height: 22vh;
+    margin-top: 2vh;
+    margin-left: 4vh;
+    z-index: 2;
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity ease-in 0.7s, transform ease-in-out 0.7s;
+    -webkit-filter: drop-shadow(0px 0px 20px #3f71b85e)
+}
+.transition {
+    opacity: 1;
+    transform: scale(1);
+}
+.mr_open_cel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    height: 45vh;
+    margin-top: 5vh;
+    margin-left: -18vh;
+    transform: scale(.9);
+    transition: opacity ease-in-out 0.3s, transform ease-in-out 0.3s;
+    animation: rotate_cel 7s ease-in-out;
+    animation-fill-mode: forwards;
+    animation-delay: 1;
+
+    -webkit-animation: rotate_cel 7s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-delay:1s;
+    -webkit-animation-fill-mode: forwards, none
+}
+.transition_cel {
+    transform: scale(1);
+    opacity: 1;
+}
+@keyframes rotate_cel {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    20%{
+        transform: rotateZ(-3deg);
+    }
+    40%{
+        transform: rotateZ(3deg);
+    }
+    60%{
+        transform: rotateZ(-3deg);
+    }
+    80% {
+        transform: rotateZ(3deg);
+    }
+    100%{
+        transform: translateY(6vh) rotateZ(100deg);
+    }
+}
+
+.empecemos {
+    position: absolute;
+    width: 500px;
+    font-family: 'FuturaStd-ExtraBold';
+    text-align: left;
+    font-size: 4vw;
+    color: #ffffff;
+    top: 0;
+    z-index: 4;
+    margin-top: 29vh;
+    margin-left: 36vh;
+    text-shadow: 0px 0px 20px #3f71b865;
+    transform: scale(.8);
+    opacity: 0;
+    transition: opacity ease-in-out 1s, transform ease-in-out 1s;
+}
+.transition_empecemos {
+    transform: scale(1);
+    opacity: 1;
+}

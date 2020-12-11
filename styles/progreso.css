@@ -1,0 +1,46 @@
+.barra_progreso {
+    position: absolute;
+    top: -3vh;
+    left: 50%;
+    transform: translate(-50%, 0);
+    /* flex */
+    display: flex;
+}
+.progreso_1 {
+    width: 4vh;
+    height: 1vh;
+    margin: 0 2px;
+    background-color: #0f5172;
+    border-radius: 2px;
+}
+.progreso_2 {
+    width: 4vh;
+    height: 1vh;
+    margin: 0 2px;
+    background-color: #0f5172;
+    border-radius: 2px;
+}
+.progreso_3 {
+    width: 4vh;
+    height: 1vh;
+    margin: 0 2px;
+    background-color: #0f5172;
+    border-radius: 2px;
+}
+.progreso_4 {
+    width: 4vh;
+    height: 1vh;
+    margin: 0 2px;
+    background-color: #0f5172;
+    border-radius: 2px;
+}
+.progreso_5 {
+    width: 4vh;
+    height: 1vh;
+    margin: 0 2px;
+    background-color: #0f5172;
+    border-radius: 2px;
+}
+.active {
+    background-color: #3bc7f4 !important;
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inicio</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="styles/spinner.css">
+    <link rel="stylesheet" href="styles/bubbles.css">
+    <link rel="stylesheet" href="styles/inicio.css">
+    <link rel="icon" href="images/bubble.png">
+</head>
+<body>
+    <audio id="line_1" src="audio/line_1.mp3"></audio>
+    <audio id="line_2" src="audio/line_2.mp3"></audio>
+    <audio id="line_3" src="audio/line_3.mp3"></audio>
+    <audio id="line_4" src="audio/line_4.mp3"></audio>
+    <audio id="wind_1" src="audio/wind_1.mp3"></audio>
+    <audio id="wind_2" src="audio/wind_2.mp3"></audio>
+    <audio id="ice_1" src="audio/ice_1.mp3"></audio>
+    <audio id="ice_2" src="audio/ice_2.mp3"></audio>
+    <audio id="music" src="audio/music.mp3"></audio>
+
+
+    <div id="CARGANDO" class="lds-ring"><div></div><div></div><div></div><div></div></div>
+
+    <!-- <div id="comenzar" class="noDisplay">
+        <button id="btn" onclick="mostrar()">COMENZAR</button>
+    </div> -->
+
+    
+    <div class="welcome_container noDisplay">
+        <img onclick="skipToVideo()" class="skip noDisplay" src="images/skip.png" alt="Ver el video">
+        <div class="overlay"></div>
+        <div class="mr_open_container">
+            <img class="mr_open noDrag" src="images/mr_open_2.png" alt="Mr Open">
+            <img class="mr_open_text_1 noDrag" src="images/text_3.png" alt="¡HOLA! TE DAMOS LA BIENVENIDA AL KIOSCO DE L&M">
+            <img class="mr_open_cel noDrag" src="images/mr_open_cel.png" alt=".">
+            <p class="empecemos noDisplay">¿ESTÁS LISTO? <br> ¡EMPECEMOS!</p>
+        </div>
+    </div>
+
+    <div id="video"></div>
+
+    <script>
+        var isReady = false;
+        
+        var images = [];
+        function preload() {
+            for (var i = 0; i < arguments.length; i++) {
+                images[i] = new Image();
+                images[i].src = preload.arguments[i];
+            }
+        }
+        preload(
+            "images/text_1.png",
+            "images/text_2.png",
+            "images/text_3.png",
+            "images/mr_open_1.png",
+            "images/mr_open_2.png",
+            "images/mr_open_cel.png",
+            "images/bkg_inicio.png",
+            "images/bubble.png",
+            "images/skip.png"
+        )
+
+        window.addEventListener('load', function () {
+            console.log( "window loaded" );
+            document.getElementById('CARGANDO').classList.add('noDisplay')
+            // document.getElementById('comenzar').classList.remove('noDisplay');
+            const body = document.getElementsByClassName('welcome_container')[0];
+            isReady = true;
+            body.classList.remove('noDisplay');
+        })
+
+        // function mostrar() {
+        //     const body = document.getElementsByClassName('welcome_container')[0];
+        //     isReady = true;
+        //     document.getElementById('comenzar').remove();
+        //     body.classList.remove('noDisplay');
+        // }
+            
+    </script>
+
+    
+    <script defer src="scripts/welcome_bkg.js"></script>
+    <script defer src="scripts/animations.js"></script>
+    <script defer src="scripts/audio.js"></script>
+    <script defer src="scripts/bubble_transition.js"></script>
+
+</body>
+</html>

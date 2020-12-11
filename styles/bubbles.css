@@ -1,0 +1,60 @@
+.bubbles_slow {
+    position: absolute;
+    bottom: -100px;
+    z-index: 2;
+    animation: animate_slow 15s linear infinite;
+}
+@keyframes animate_slow {
+    0% {
+        transform: translateY(0vh);
+    }
+    100% {
+        transform: translateY(-150vh);
+    }
+}
+.bubbles_fast {
+    position: absolute;
+    bottom: -100px;
+    z-index: 1;
+    animation: animate_fast 15s linear infinite;
+}
+@keyframes animate_fast {
+    0% {
+        transform: translateY(0vh);
+    }
+    100% {
+        transform: translateY(-250vh);
+    }
+}
+
+
+
+/* TRANSITION */
+.bubbles_transition_1 {
+    position: absolute;
+    bottom: -100px;
+    z-index: 2;
+    animation: animate_transition_1 3s linear infinite;
+}
+@keyframes animate_transition_1 {
+    0% {
+        transform: translateY(0vh);
+    }
+    100% {
+        transform: translateY(-150vh);
+    }
+}
+.bubbles_transition_2 {
+    position: absolute;
+    bottom: -100px;
+    z-index: 1;
+    animation: animate_transition_2 3s linear infinite;
+}
+@keyframes animate_transition_2 {
+    0% {
+        transform: translateY(0vh);
+    }
+    100% {
+        transform: translateY(-170vh);
+    }
+}

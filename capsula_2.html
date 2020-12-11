@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>capsula_1</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="styles/capsula_2.css">
+    <link rel="stylesheet" href="styles/progreso.css">
+    <link rel="stylesheet" href="styles/spinner.css">
+    <link rel="icon" href="images/bubble.png">
+</head>
+<body>
+    
+    <audio id="capsule_2_line_1" src="audio/capsule_2_line_1.mp3"></audio>
+    <audio id="ice_1" src="audio/ice_1.mp3"></audio>
+    <audio id="ice_2" src="audio/ice_2.mp3"></audio>
+
+    <div id="CARGANDO" class="lds-ring"><div></div><div></div><div></div><div></div></div>
+    
+    <div class="capsula_2_container noDisplay">
+        
+        <div class="contenido">
+
+            <a href="kiosko.html">
+                <img class="salir noDrag" src="images/salir.png" alt="salir">
+            </a>
+            <a href="capsula_1.html">
+                <div class="previous_container">
+                    <img class="previous_deco noDrag" src="images/previous_deco.png" alt=".">
+                    <img class="previous noDrag" src="images/previous.png" alt="volver">
+                </div>
+            </a>
+            <a href="capsula_3.html">
+                <div class="next_container">
+                    <img class="next_deco noDrag" src="images/next_deco.png" alt=".">
+                    <img class="next noDrag" src="images/next.png" alt="siguiente">
+                </div>
+            </a>
+            <div class="left_content">
+                <img class="c2_details noDrag" src="images/c1_details.png" alt=".">
+                <img class="c1_pack noDrag" src="images/c1_pack.png" alt=".">
+                <img class="c2_cig noDrag" src="images/c1_cig.png" alt=".">
+                <img class="c2_capsules noDrag" src="images/c1_capsules.png" alt=".">
+                <p class="aviso">*De los productos de Massalin Particulares SRL</p>
+            </div>
+            <div class="right_content">
+                <div class="right_content_top">
+                    <img class="c1_precio noDrag" src="images/c1_precio.png" alt="A SOLO: $125">
+                </div>
+                <div class="right_content_middle">
+                    <p class="titulo">
+                        OFRECÉ L&M
+                    </p>
+                    <p class="subtitulo">
+                        A QUIENES BUSCAN:
+                    </p>
+                    <ul class="descripcion_list">
+                        <li class="descripcion_1">CIGARRILLO RUBIO + CÁPSULA DE MENTOL</li>
+                        <li class="descripcion_2">PRECIO ECONÓMICO</li>
+                        <li class="descripcion_3">CALIDAD INTERNACIONAL</li>
+                    </ul>
+                </div>
+                <div class="right_content_bottom">
+                    <img class="marlboro noDrag" src="images/marlboro.png" alt="De los creadores de Marlboro">
+                </div>
+            </div>
+        </div>
+        <div class="disclaimer">
+            <div class="barra_progreso">
+                <div class="progreso_1"></div>
+                <div class="progreso_2 active"></div>
+                <div class="progreso_3"></div>
+                <div class="progreso_4"></div>
+                <div class="progreso_5"></div>
+            </div>
+            <p>
+                INFORMACIÓN COMERCIAL. PROHIBIDA SU EXHIBICIÓN A CONSUMIDORES.
+                <br>
+                Dirección: Malaver 550. Razón Social: Massalin Particulares SRL.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        var images = [];
+        function preload() {
+            for (var i = 0; i < arguments.length; i++) {
+                images[i] = new Image();
+                images[i].src = preload.arguments[i];
+            }
+        }
+        preload(
+            "images/c2_capsules.png",
+            "images/c2_cig.png",
+            "images/c2_details.png",
+            "images/c1_pack.png",
+            "images/c1_precio.png",
+            "images/marlboro.png",
+            "images/next.png",
+            "images/next_deco.png",
+            "images/previous.png",
+            "images/previous_deco.png",
+            "images/salir.png",
+            "images/blank.png",
+            "images/list_bullet.png"
+        )
+
+        window.addEventListener('load', function () {
+            console.log( "window loaded" );
+            document.getElementById('CARGANDO').classList.add('noDisplay')
+            const body = document.getElementsByClassName('capsula_2_container')[0];
+            body.classList.remove('noDisplay');
+            start();
+        })
+    </script>
+    <script src="scripts/capsula_2.js"></script>
+
+</body>
+</html>

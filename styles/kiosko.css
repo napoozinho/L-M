@@ -1,0 +1,273 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body, html {
+    overflow: hidden;
+    height: 100%;
+}
+
+@font-face {
+    src: url(../fonts/OpenSans-Bold.ttf);
+    font-family: 'OpenSans-Bold';
+}
+
+.noDisplay {
+    display: none !important;
+}
+
+.noDrag {
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+.kiosko {
+    background-image: url('../images/bkg_kiosko.png');
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    /* flex */
+    display: flex;
+    justify-content: center;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.692);
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    /* flex */
+    display: flex;
+    justify-content: center;
+}
+.playbtn {
+    align-self: center;
+    width: 146px;
+    height: 48px;
+    font-family: 'OpenSans-Bold';
+    font-size: 14px;
+    line-height: 16px;
+    background: #266da8;;
+    color: #ffffff;
+    letter-spacing: 0;
+    padding: 16px 32px;
+    border-radius: 25px;
+    box-shadow: 0px 10px 20px rgba(253, 253, 253, 0.123);
+    border: 2px solid #327ab6;
+    cursor: pointer;
+    padding: 16px 32px !important;
+    transition: transform 0.1s linear;
+    /* flex */
+    align-self: center;
+}
+.playbtn:hover {
+    transform: translate(0px, -2px);
+}
+
+.capsule_1_container {
+    position: absolute;
+    margin-left: 38vh;
+    margin-top: 57vh;
+    /* flex */
+    display: flex;
+}
+.capsule_1 {
+    position: static;
+    width: 15vh;
+    /* margin-left: 38vh; */
+    /* margin-top: 57vh; */
+    filter: brightness(70%);
+    cursor: pointer;
+    z-index: 2;
+}
+
+.capsule_2_container {
+    position: absolute;
+    margin-left: -21vh;
+    margin-top: 48vh;
+    /* flex */
+    display: flex;
+}
+.capsule_2 {
+    position: static;
+    width: 17vh;
+    filter: brightness(70%);
+    cursor: pointer;
+    z-index: 2;
+}
+
+.capsule_3_container {
+    position: absolute;
+    margin-left: -61vh;
+    margin-top: 67vh;
+    /* flex */
+    display: flex;
+}
+.capsule_3 {
+    position: static;
+    width: 19vh;
+    filter: brightness(70%);
+    cursor: pointer;
+    z-index: 2;
+}
+
+.capsule_4_container {
+    position: absolute;
+    margin-left: -116vh;
+    margin-top: 63vh;
+    /* flex */
+    display: flex;
+}
+.capsule_4 {
+    position: static;
+    width: 10vh;
+    filter: brightness(70%);
+    cursor: pointer;
+    z-index: 2;
+}
+
+.capsule_5_container {
+    position: absolute;
+    margin-left: -132vh;
+    margin-top: 44vh;
+    /* flex */
+    display: flex;
+}
+.capsule_5 {
+    position: static;
+    width: 14vh;
+    filter: brightness(70%);
+    cursor: pointer;
+    z-index: 2;
+}
+
+
+.capsule_tag {
+    position: absolute;
+    left: 50%;
+    filter: brightness(70%);
+    color: #ffffff;
+    background-color: #266da8;
+    border-radius: 5px;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    text-align: center;
+    font-family: 'OpenSans-Bold';
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 5px 15px #ffffff50;
+    z-index: 1;
+}
+.capsule:hover .capsule_tag {
+    left: 100%;
+    opacity: 1;
+}
+
+.active {
+    filter: none !important;
+    animation: hover 2s ease-in-out infinite;
+}
+@keyframes hover {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* 
+##Device = Desktops
+##Screen = 2450px to higher resolution desktops
+*/
+
+@media (min-width: 2450px) {
+    .capsule_tag {
+        width: 180px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 26px;
+    }
+}
+
+/* 
+##Device = Desktops
+##Screen =  to higher resolution desktops
+*/
+@media (min-width: 1281px) {
+}
+
+/* 
+##Device = Laptops, Desktops
+##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+}
+
+/* 
+##Device = Tablets, Ipads (portrait)
+##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .capsule_tag {
+        width: 90px;
+        height: 25px;
+        line-height: 25px;
+        font-size: 13px;
+    }
+}
+
+/* 
+##Device = Tablets, Ipads (landscape)
+##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+}
+
+/* 
+##Device = Low Resolution Tablets, Mobiles (Landscape)
+##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .capsule_tag {
+        width: 80px;
+        height: 25px;
+        line-height: 25px;
+        font-size: 12px;
+    }
+}
+
+/* 
+##Device = Most of the Smartphones Mobiles (Portrait)
+##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .capsule_tag {
+        width: 75px;
+        height: 20px;
+        line-height: 20px;
+        font-size: 11px;
+    }
+}
