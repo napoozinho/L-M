@@ -46,4 +46,11 @@ function start() {
 
     // repetidor de bubbles
     // setInterval(createBubble, 133)
+
+
+    const music = document.getElementById('music');
+    music.pause();
+    music.currentTime = 0;
+    music.volume = 0.3;
+    music.play();
 }
