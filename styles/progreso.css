@@ -3,6 +3,7 @@
     top: -3vh;
     left: 50%;
     transform: translate(-50%, 0);
+    
     /* flex */
     display: flex;
 }
@@ -12,6 +13,7 @@
     margin: 0 2px;
     background-color: #0f5172;
     border-radius: 2px;
+    
 }
 .progreso_2 {
     width: 4vh;
@@ -43,4 +45,5 @@
 }
 .active {
     background-color: #3bc7f4 !important;
+    box-shadow: 0px 0px 5px #0f51726e;
 }

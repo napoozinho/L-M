@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: black;
+}
+body, html {
+    overflow: hidden;
+    height: 100%;
+}
+
+.noDisplay {
+    display: none !important;
+}
+
+.noDrag {
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+.skip {
+    position: absolute;
+    width: 20vh;
+    z-index: 10;
+    top: -2vh;
+    right: 2vh;
+    opacity: 0;
+    cursor: pointer;
+    filter: brightness(80%);
+    transition: filter 0.2s linear, opacity 1s ease-in-out, top 0.5s cubic-bezier(0.57, 0.92, 0.55, 1.15);
+}
+
+.welcome_container {
+    background-image: url('../images/bkg_inicio.png');
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    /* flex */
+    display: flex;
+    justify-content: center;
+}
+.mr_open_container {
+    position: relative;
+    margin-top: 10vh;
+    z-index: 3;
+    /* flex */
+    align-self: center;
+}
+.text_final {
+    position: absolute;
+    height: 18vh;
+    margin-top: 6vh;
+    margin-left: -1vh;
+    z-index: 2;
+    -webkit-filter: drop-shadow(0px 0px 20px #3f71b85e)
+}
+.mr_open {
+    height: 80vh;
+    margin-bottom: 15vh;
+}
+.disclaimer {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    padding: 2vh 0;
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    font-family: "Arial Narrow", Arial, sans-serif;
+    font-size: 3vh;
+    letter-spacing: 0.2em;
+    /* flex */
+    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

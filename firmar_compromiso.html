@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L&M | FIRMAR COMPROMISO</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="styles/firmar_compromiso.css">
+    <link rel="stylesheet" href="styles/spinner.css">
+    <link rel="stylesheet" href="styles/clap_overlay.css">
+    <link rel="icon" href="images/favicon.png">
+</head>
+<body>
+
+    <audio id="claps" src="audio/claps.mp3"></audio>
+    <audio id="compromiso_line_1" src="audio/compromiso_line_1.mp3"></audio>
+    <audio id="compromiso_line_2" src="audio/compromiso_line_2.mp3"></audio>
+    <audio id="compromiso_line_3" src="audio/compromiso_line_3.mp3"></audio>
+
+    <div id="CARGANDO" class="lds-ring"><div></div><div></div><div></div><div></div></div>
+    
+    <div class="firmar_compromiso_container noDisplay">
+        
+        <div class="contenido">
+
+            <!-- volver al kiosko -->
+            <a href="kiosko.html">
+                <img class="salir noDrag" src="images/salir.png" alt="salir">
+            </a>
+            <!-- capsula anterior -->
+            <!-- <a href="capsula_5.html">
+                <div class="previous_container">
+                    <img class="previous_deco noDrag" src="images/previous_deco.png" alt=".">
+                    <img class="previous noDrag" src="images/previous.png" alt="volver">
+                </div>
+            </a> -->
+
+            <!-- next_1 slide -->
+            <div onclick="fnc_next_1()" class="next_1_cont">
+                <img class="next_1_deco noDrag" src="images/next_deco.png" alt=".">
+                <img class="next_1 noDrag" src="images/refrescar_compromiso.png" alt="Refrescar compromiso">
+            </div>
+
+            <!-- next_2 slide -->
+            <div onclick="fnc_next_2()" class="next_2_cont">
+                <img class="next_2_deco noDrag noDisplay" src="images/next_deco.png" alt=".">
+                <img class="next_2 noDrag noDisplay" src="images/participar_del_sorteo.png" alt="Participar del sorteo">
+            </div>
+
+            <div class="left_content">
+                <img class="compromiso_details_left noDrag" src="images/compromiso_details_left.png" alt=".">
+                <img class="compromiso_pack noDrag" src="images/c1_pack.png" alt=".">
+                <img class="compromiso_cig noDrag" src="images/c1_cig.png" alt=".">
+                <img class="compromiso_capsules_left noDrag" src="images/c3_capsules_1_left.png" alt=".">
+            </div>
+            <div class="right_content">
+                <img class="compromiso_capsules_right noDrag" src="images/c5_capsules_right.png" alt=".">
+
+                <!-- slide 1 -->
+                <p class="titulo">
+                    ¿ESTÁS LISTO PARA <br> REFRESCAR TU <br> COMPROMISO?
+                </p>
+                <p class="subtitulo_1">
+                    ME COMPROMETO A OFRECERLES A MIS <br> CLIENTES LA CÁPSULA DE MENTOL DE <br> CALIDAD INTERNACIONAL, AL MEJOR PRECIO.
+                </p>
+                
+                <!-- slide 2 -->
+                <p class="subtitulo_2 noDisplay">
+                    ¡MUCHAS GRACIAS POR PARTICIPAR <br> DE ESTA EXPERIENCIA Y REFRESCAR <br> TU COMPROMISO!
+                </p>
+                <p class="subtitulo_3 noDisplay">
+                    ¡YA ESTÁS PARTICIPANDO DE <br> UN SORTEO POR PUNTOS <br> EN GO OPEN!
+                </p>
+
+                <!-- slide 3 -->
+                <p class="form_text noDisplay">
+                    <span class="form_text_font">POR ÚLTIMO, ¡QUEREMOS CONOCER <br> TU OPINIÓN!</span> PARA ESO TE PEDIMOS QUE <br> NOS DEJES UN COMENTARIO SOBRE QUÉ ES LO <br> QUE MÁS VALORAS DE ESTE NUEVO PRODUCTO.
+                </p>                
+                <form class="noDisplay" id="form_comentario" name="form_comentario" action="outro.html" method="">
+                    <textarea class="form_input" name="comentario" placeholder="ESCRIBÍ TU TEXTO ACÁ" maxlength="500"></textarea>
+                    <div class="enviar">
+                        <img class="form_submit_deco noDisplay noDrag" src="images/enviar.png" alt=".">
+                        <input class="form_submit noDisplay noDrag" type="image" name="submit" src="images/next_deco.png" alt="Submit">
+                    </div>
+                </form>
+
+                <img class="compromiso_details_right noDrag" src="images/compromiso_details_right.png" alt=".">
+            </div>
+        </div>
+        <div class="disclaimer">
+            <p>
+                INFORMACIÓN COMERCIAL. PROHIBIDA SU EXHIBICIÓN A CONSUMIDORES.
+                <br>
+                Dirección: Malaver 550. Razón Social: Massalin Particulares SRL.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        var images = [];
+        function preload() {
+            for (var i = 0; i < arguments.length; i++) {
+                images[i] = new Image();
+                images[i].src = preload.arguments[i];
+            }
+        }
+        preload(
+            "images/salir.png",
+            "images/next_deco.png",
+            "images/refrescar_compromiso.png",
+            "images/participar_del_sorteo.png",
+            "images/compromiso_details_left.png",
+            "images/c1_pack.png",
+            "images/c1_cig.png",
+            "images/c3_capsules_1_left.png",
+            "images/c5_capsules_right.png",
+            "images/enviar.png",
+            "images/compromiso_details_right.png"
+        )
+
+        window.addEventListener('load', function () {
+            console.log( "window loaded" );
+            document.getElementById('CARGANDO').classList.add('noDisplay')
+            const body = document.getElementsByClassName('firmar_compromiso_container')[0];
+            body.classList.remove('noDisplay');
+            start();
+        })
+    </script>
+    <script src="scripts/firmar_compromiso.js"></script>
+    <script defer src="scripts/clap_overlay.js"></script>
+
+</body>
+</html>

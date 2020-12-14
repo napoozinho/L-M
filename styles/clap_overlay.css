@@ -1,0 +1,33 @@
+/* TRANSITION */
+.clap_1 {
+    position: absolute;
+    bottom: -100px;
+    z-index: 2;
+    animation: animate_transition_1 5s linear infinite;
+}
+@keyframes animate_transition_1 {
+    0% {
+        transform: translateY(0vh);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-110vh);
+        opacity: 0;
+    }
+}
+.clap_2 {
+    position: absolute;
+    bottom: -100px;
+    z-index: 1;
+    animation: animate_transition_2 5s linear infinite;
+}
+@keyframes animate_transition_2 {
+    0% {
+        transform: translateY(0vh);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-130vh);
+        opacity: 0;
+    }
+}

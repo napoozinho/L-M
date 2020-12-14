@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L&M | COMPROMISO</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="styles/capsula_5.css">
+    <link rel="stylesheet" href="styles/progreso.css">
+    <link rel="stylesheet" href="styles/spinner.css">
+    <link rel="icon" href="images/favicon.png">
+</head>
+<body>
+
+    <audio id="capsule_5_line_1" src="audio/capsule_5_line_1.mp3"></audio>
+    <audio id="capsule_5_end" src="audio/capsule_5_end.mp3"></audio>
+    <audio id="fresh" src="audio/fresh.mp3"></audio>
+
+    <div id="CARGANDO" class="lds-ring"><div></div><div></div><div></div><div></div></div>
+    
+    <div class="capsula_5_container noDisplay">
+        
+        <div class="contenido">
+
+            <!-- volver al kiosko -->
+            <a href="kiosko.html">
+                <img class="salir noDrag" src="images/salir.png" alt="salir">
+            </a>
+            <!-- capsula anterior -->
+            <a href="capsula_4.html">
+                <div class="previous_container">
+                    <img class="previous_deco noDrag" src="images/previous_deco.png" alt=".">
+                    <img class="previous noDrag" src="images/previous.png" alt="volver">
+                </div>
+            </a>
+            <!-- capsula siguiente -->
+            <a href="firmar_compromiso.html">
+                <div class="next_container">
+                    <img class="next_deco noDrag" src="images/next_deco.png" alt=".">
+                    <img class="next noDrag" src="images/firma_el_compromiso.png" alt="Firmá el compromiso">
+                </div>
+            </a>
+
+            <div class="left_content">
+                <img class="c5_details_left noDrag" src="images/c1_details.png" alt=".">
+                <img class="c5_pack noDrag" src="images/c1_pack.png" alt=".">
+                <img class="c5_cig noDrag" src="images/c1_cig.png" alt=".">
+                <img class="c5_capsules_left noDrag" src="images/c1_capsules.png" alt=".">
+                <p class="aviso">*De los productos de Massalin Particulares SRL</p>
+            </div>
+            <div class="right_content">
+                <img class="c5_capsules_right noDrag" src="images/c5_capsules_right.png" alt=".">
+                <p class="titulo">
+                    <span class="froze">REFRESCAMOS</span> EL <br> COMPROMISO L&M
+                </p>
+                <ul class="descripcion_list">
+                    <li class="descripcion_1">LA CÁPSULA DE MENTOL DE CALIDAD <br> INTERNACIONAL MÁS ECONÓMICA*</li>
+                    <li class="descripcion_2">OFRECÉ L&M FORWARD <span><img class="c5_precio noDrag" src="images/c1_precio.png" alt=""></span> </li>
+                </ul>
+                <p class="subtitulo">
+                    ¡AHORA TE TOCA A VOS!
+                </p>
+                <img class="c5_details_right noDrag" src="images/c5_details_right.png" alt=".">
+                <img class="marlboro noDrag" src="images/marlboro.png" alt="De los creadores de Marlboro">
+            </div>
+        </div>
+        <div class="disclaimer">
+            <div class="barra_progreso">
+                <div class="progreso_1"></div>
+                <div class="progreso_2"></div>
+                <div class="progreso_3"></div>
+                <div class="progreso_4"></div>
+                <div class="progreso_5 active"></div>
+            </div>
+            <p>
+                INFORMACIÓN COMERCIAL. PROHIBIDA SU EXHIBICIÓN A CONSUMIDORES.
+                <br>
+                Dirección: Malaver 550. Razón Social: Massalin Particulares SRL.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        var images = [];
+        function preload() {
+            for (var i = 0; i < arguments.length; i++) {
+                images[i] = new Image();
+                images[i].src = preload.arguments[i];
+            }
+        }
+        preload(
+            "images/salir.png",
+            "images/next_deco.png",
+            "images/next.png",
+            "images/previous_deco.png",
+            "images/previous.png",
+            "images/c1_details.png",
+            "images/c1_pack.png",
+            "images/c1_cig.png",
+            "images/c1_capsules.png",
+            "images/c5_capsules_right.png",
+            "images/c5_capsules_right.png",
+            "images/c5_details_right.png",
+            "images/c1_precio.png",
+            "images/marlboro.png"
+        )
+
+        window.addEventListener('load', function () {
+            console.log( "window loaded" );
+            document.getElementById('CARGANDO').classList.add('noDisplay')
+            const body = document.getElementsByClassName('capsula_5_container')[0];
+            body.classList.remove('noDisplay');
+            start();
+        })
+    </script>
+    <script src="scripts/capsula_5.js"></script>
+
+</body>
+</html>

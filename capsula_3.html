@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L&M | FAMILIA</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="styles/capsula_3.css">
+    <link rel="stylesheet" href="styles/progreso.css">
+    <link rel="stylesheet" href="styles/spinner.css">
+    <link rel="icon" href="images/favicon.png">
+</head>
+<body>
+    
+    <audio id="capsule_3_line_1" src="audio/capsule_3_line_1.mp3"></audio>
+    <audio id="capsule_3_end" src="audio/capsule_3_end.mp3"></audio>
+    <audio id="ice_3" src="audio/ice_3.mp3"></audio>
+    <audio id="light" src="audio/light.mp3"></audio>
+
+    <div id="CARGANDO" class="lds-ring"><div></div><div></div><div></div><div></div></div>
+    
+    <div class="capsula_3_container noDisplay">
+        
+        <div class="contenido">
+
+            <!-- volver al kiosko -->
+            <a href="kiosko.html">
+                <img class="salir noDrag" src="images/salir.png" alt="salir">
+            </a>
+            <!-- capsula anterior -->
+            <a href="capsula_2.html">
+                <div class="previous_container">
+                    <img class="previous_deco noDrag" src="images/previous_deco.png" alt=".">
+                    <img class="previous noDrag" src="images/previous.png" alt="volver">
+                </div>
+            </a>
+            <!-- capsula siguiente -->
+            <a href="capsula_4.html">
+                <div class="next_container">
+                    <img class="next_deco noDrag" src="images/next_deco.png" alt=".">
+                    <img class="next noDrag" src="images/next.png" alt="siguiente">
+                </div>
+            </a>
+
+            <!-- SLIDE 1/3 -->
+            <div class="slide_1">
+                <img class="c3_details_1_left noDrag" src="images/c3_details_1_left.png" alt=".">.
+                <img class="c3_details_1_right noDrag" src="images/c3_details_1_right.png" alt=".">
+                <img class="c3_capsules_1_left noDrag" src="images/c3_capsules_1_left.png" alt=".">
+                <img class="c3_capsules_1_right noDrag" src="images/c3_capsules_1_right.png" alt=".">
+
+                <p class="c3_titulo_1">SI TE PIDEN ALGUNA <br> DE ESTAS MARCAS:</p>
+
+                <img class="c3_pack_1 noDrag" src="images/c3_pack_1.png" alt=".">
+                <img class="c3_pack_2 noDrag" src="images/c3_pack_2.png" alt=".">
+                <img class="c3_pack_3 noDrag" src="images/c3_pack_3.png" alt=".">
+            </div>
+
+            <!-- SLIDE 2/3 -->
+            <div class="slide_2 noDisplay">
+                <div class="left_content">
+                    <img class="c3_details noDrag" src="images/c1_details.png" alt=".">
+                    <img class="c3_pack noDrag" src="images/c1_pack.png" alt=".">
+                    <img class="c3_cig noDrag" src="images/c1_cig.png" alt=".">
+                    <img class="c3_capsules_2_left noDrag" src="images/c3_capsules_2_left.png" alt=".">
+                    <p class="aviso">*De los productos de Massalin Particulares SRL</p>
+                </div>
+                <div class="right_content">
+                    <img class="c3_capsules_2_right noDrag" src="images/c3_capsules_2_right.png" alt=".">
+                    <p class="titulo">
+                        OFRECÉ <br> L&M FORWARD
+                    </p>
+                    <img class="marlboro noDrag" src="images/marlboro.png" alt="De los creadores de Marlboro">
+                </div>
+            </div>
+
+            <!-- SLIDE 3/3 -->
+            <div class="slide_3 noDisplay">
+                <img class="c3_details_3 noDrag" src="images/c3_details_3.png" alt=".">
+                <div class="packs_container">
+                    <div class="pack_left">
+                        <img src="images/c3_pack_red.png" alt="." class="pack_red noDrag">
+                        <p class="pack_red_texto">SABOR <br> SUPERIOR</p>
+                    </div>
+                    <div class="pack_center">
+                        <img src="images/c3_pack_l&m.png" alt="." class="pack_lm noDrag">
+                        <p class="pack_lm_texto">SABOR <br> REFRESCANTE</p>
+                    </div>
+                    <div class="pack_right">
+                        <img src="images/c3_pack_blue.png" alt="." class="pack_blue noDrag">
+                        <p class="pack_blue_texto">SABOR <br> BALANCEADO</p>
+                    </div>
+                </div>
+                <img class="c3_texto noDrag" src="images/c3_texto.png" alt="La familia más económica">
+                <p class="aviso">*De los productos de Massalin Particulares SRL</p>
+                <img class="c3_marlboro noDrag" src="images/marlboro.png" alt="Marlboro">
+            </div>
+
+        </div>
+
+        <!-- disclaimer + progreso -->
+        <div class="disclaimer">
+            <div class="barra_progreso">
+                <div class="progreso_1"></div>
+                <div class="progreso_2"></div>
+                <div class="progreso_3 active"></div>
+                <div class="progreso_4"></div>
+                <div class="progreso_5"></div>
+            </div>
+            <p>
+                INFORMACIÓN COMERCIAL. PROHIBIDA SU EXHIBICIÓN A CONSUMIDORES.
+                <br>
+                Dirección: Malaver 550. Razón Social: Massalin Particulares SRL.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        var images = [];
+        function preload() {
+            for (var i = 0; i < arguments.length; i++) {
+                images[i] = new Image();
+                images[i].src = preload.arguments[i];
+            }
+        }
+        preload(
+            "images/marlboro.png",
+            "images/next.png",
+            "images/next_deco.png",
+            "images/previous.png",
+            "images/previous_deco.png",
+            "images/salir.png",
+
+            "images/c3_details_1_left.png",
+            "images/c3_details_1_right.png",
+            "images/c3_capsules_1_left.png",
+            "images/c3_capsules_1_right.png",
+            "images/c3_pack_1.png",
+            "images/c3_pack_2.png",
+            "images/c3_pack_3.png",
+            "images/c1_details.png",
+            "images/c1_pack.png",
+            "images/c1_cig.png",
+            "images/c3_capsules_2_left.png",
+            "images/c3_capsules_2_right.png",
+            "images/c3_details_3.png",
+            "images/c3_texto.png",
+            "images/c3_pack_l&m.png",
+            "images/c3_pack_red.png",
+            "images/c3_pack_blue.png"
+            )
+
+        window.addEventListener('load', function () {
+            console.log( "window loaded" );
+            document.getElementById('CARGANDO').classList.add('noDisplay')
+            const body = document.getElementsByClassName('capsula_3_container')[0];
+            body.classList.remove('noDisplay');
+            start();
+        })
+    </script>
+    <script src="scripts/capsula_3.js"></script>
+
+</body>
+</html>

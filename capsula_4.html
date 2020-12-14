@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L&M | HERRAMIENTAS</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="styles/capsula_4.css">
+    <link rel="stylesheet" href="styles/progreso.css">
+    <link rel="stylesheet" href="styles/spinner.css">
+    <link rel="icon" href="images/favicon.png">
+</head>
+<body>
+
+    <audio id="capsule_4_line_1" src="audio/capsule_4_line_1.mp3"></audio>
+    <audio id="capsule_4_end" src="audio/capsule_4_end.mp3"></audio>
+
+    <div id="CARGANDO" class="lds-ring"><div></div><div></div><div></div><div></div></div>
+    
+    <div class="capsula_4_container noDisplay">
+        
+        <div class="contenido">
+
+            <!-- volver al kiosko -->
+            <a href="kiosko.html">
+                <img class="salir noDrag" src="images/salir.png" alt="salir">
+            </a>
+            <!-- capsula anterior -->
+            <a href="capsula_3.html">
+                <div class="previous_container">
+                    <img class="previous_deco noDrag" src="images/previous_deco.png" alt=".">
+                    <img class="previous noDrag" src="images/previous.png" alt="volver">
+                </div>
+            </a>
+            <!-- capsula siguiente -->
+            <a href="capsula_5.html">
+                <div class="next_container">
+                    <img class="next_deco noDrag" src="images/next_deco.png" alt=".">
+                    <img class="next noDrag" src="images/next.png" alt="siguiente">
+                </div>
+            </a>
+
+            <div class="left_content">
+                <img class="c4_details_left noDrag" src="images/c1_details.png" alt=".">
+                <img class="c4_pack noDrag" src="images/c1_pack.png" alt=".">
+                <img class="c4_cig noDrag" src="images/c1_cig.png" alt=".">
+                <img class="c4_capsules_left noDrag" src="images/c1_capsules.png" alt=".">
+                <p class="aviso">*De los productos de Massalin Particulares SRL</p>
+            </div>
+            <div class="right_content">
+                <img class="c4_capsules_right noDrag" src="images/c4_capsules_right.png" alt=".">
+                <div class="right_content_top">
+                    <p class="titulo">
+                        ¿CÓMO PODÉS <br> APOYAR ESTE <br> LANZAMIENTO?
+                    </p>
+                    <ul class="descripcion_list">
+                        <li class="descripcion_1">MATERIALES INFORMATIVOS</li>
+                        <li class="descripcion_2">HERRAMIENTAS DE DISPONIBILIDAD</li>
+                        <li class="descripcion_3">MATERIALES DE COMUNICACIÓN</li>
+                        <li class="descripcion_4">FLYERS DIGITALES</li>
+                    </ul>
+                </div>
+                <div class="right_content_bottom">
+                    <img class="marlboro noDrag" src="images/marlboro.png" alt="De los creadores de Marlboro">
+                </div>
+                <img class="c4_details_right noDrag" src="images/c4_details_right.png" alt=".">
+            </div>
+        </div>
+        <div class="disclaimer">
+            <div class="barra_progreso">
+                <div class="progreso_1"></div>
+                <div class="progreso_2"></div>
+                <div class="progreso_3"></div>
+                <div class="progreso_4 active"></div>
+                <div class="progreso_5"></div>
+            </div>
+            <p>
+                INFORMACIÓN COMERCIAL. PROHIBIDA SU EXHIBICIÓN A CONSUMIDORES.
+                <br>
+                Dirección: Malaver 550. Razón Social: Massalin Particulares SRL.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        var images = [];
+        function preload() {
+            for (var i = 0; i < arguments.length; i++) {
+                images[i] = new Image();
+                images[i].src = preload.arguments[i];
+            }
+        }
+        preload(
+            "images/salir.png",
+            "images/next_deco.png",
+            "images/next.png",
+            "images/previous_deco.png",
+            "images/previous.png",
+            "images/c1_details.png",
+            "images/c1_pack.png",
+            "images/c1_cig.png",
+            "images/c1_capsules.png",
+            "images/c3_capsules_2_right.png",
+            "images/marlboro.png",
+            "images/c4_details_right.png"
+        )
+
+        window.addEventListener('load', function () {
+            console.log( "window loaded" );
+            document.getElementById('CARGANDO').classList.add('noDisplay')
+            const body = document.getElementsByClassName('capsula_4_container')[0];
+            body.classList.remove('noDisplay');
+            start();
+        })
+    </script>
+    <script src="scripts/capsula_4.js"></script>
+
+</body>
+</html>

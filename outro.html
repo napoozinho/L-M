@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L&M | Intro</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="styles/spinner.css">
+    <link rel="stylesheet" href="styles/bubbles.css">
+    <link rel="stylesheet" href="styles/outro.css">
+    <link rel="icon" href="images/favicon.png">
+</head>
+<body>
+    <audio id="outro" src="audio/outro.mp3"></audio>
+
+
+    <div id="CARGANDO" class="lds-ring"><div></div><div></div><div></div><div></div></div>
+
+    <!-- <div id="comenzar" class="noDisplay">
+        <button id="btn" onclick="mostrar()">COMENZAR</button>
+    </div> -->
+
+    
+    <div class="welcome_container noDisplay">
+        <div class="mr_open_container">
+            <img class="mr_open noDrag" src="images/mr_open_1.png" alt="Mr Open">
+            <img class="text_final noDrag" src="images/text_final.png" alt="¡GRACIAS POR SER PARTE! CONTALE A TUS CLIENTES QUE CON L&M FORWARD APRIETAN LA CÁPSULA Y NO SU BOLSILLO.">
+        </div>
+        <div class="disclaimer">
+            <p>
+                INFORMACIÓN COMERCIAL. PROHIBIDA SU EXHIBICIÓN A CONSUMIDORES.
+                <br>
+                Dirección: Malaver 550. Razón Social: Massalin Particulares SRL.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        var isReady = false;
+        
+        var images = [];
+        function preload() {
+            for (var i = 0; i < arguments.length; i++) {
+                images[i] = new Image();
+                images[i].src = preload.arguments[i];
+            }
+        }
+        preload(
+            "images/text_final.png",
+            "images/mr_open.png",
+            "images/bkg_inicio.png"
+        )
+
+        window.addEventListener('load', function () {
+            console.log( "window loaded" );
+            document.getElementById('CARGANDO').classList.add('noDisplay')
+            // document.getElementById('comenzar').classList.remove('noDisplay');
+            const body = document.getElementsByClassName('welcome_container')[0];
+            isReady = true;
+            body.classList.remove('noDisplay');
+        })
+
+        // function mostrar() {
+        //     const body = document.getElementsByClassName('welcome_container')[0];
+        //     isReady = true;
+        //     document.getElementById('comenzar').remove();
+        //     body.classList.remove('noDisplay');
+        // }
+            
+    </script>
+
+    
+    <script defer src="scripts/welcome_bkg.js"></script>
+    <script>
+        const outro = document.getElementById('outro');
+        outro.pause();
+        outro.currentTime = 0;
+        outro.play()
+    </script>
+
+</body>
+</html>
