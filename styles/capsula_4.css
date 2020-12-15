@@ -223,6 +223,7 @@ body, html {
     justify-content: center;
 }
 .right_content_top {
+    margin-bottom: 5vh;
     /* flex */
     display: flex;
     flex-direction: column;
@@ -291,11 +292,16 @@ body, html {
     width: 100%;
 }
 .c4_capsules_right {
-    align-self: center;
+    position: absolute;
+    top: 5vh;
+    right: 20vh;
+    width: 50vh;
+    animation: capsule_bounce_2 3s ease-in-out infinite; */
+    /* align-self: center;
     margin-top: -13vh;
     margin-bottom: -3vh;
     width: 50vh;
-    animation: capsule_bounce_2 3s ease-in-out infinite;
+    animation: capsule_bounce_2 3s ease-in-out infinite; */
 }
 @keyframes capsule_bounce_2 {
     0% {

@@ -33,6 +33,10 @@
                 Dirección: Malaver 550. Razón Social: Massalin Particulares SRL.
             </p>
         </div>
+
+        <div id="volver" class="noDisplay">
+            <button id="btn_volver" onclick="volver()">VOLVER</button>
+        </div>
     </div>
 
     <script>
@@ -66,7 +70,7 @@
         //     document.getElementById('comenzar').remove();
         //     body.classList.remove('noDisplay');
         // }
-            
+
     </script>
 
     
@@ -76,6 +80,23 @@
         outro.pause();
         outro.currentTime = 0;
         outro.play()
+
+        outro.addEventListener('ended', function() {
+            document.getElementsByClassName('mr_open')[0].classList.add('fade_out');
+            document.getElementsByClassName('text_final')[0].classList.add('fade_out');
+            setTimeout(() => {
+                document.getElementsByClassName('mr_open')[0].remove()
+                document.getElementsByClassName('text_final')[0].remove()
+                document.getElementById('volver').classList.remove('noDisplay');
+                setTimeout(() => {
+                    document.getElementById('volver').classList.add('fade_in');
+                }, 10);
+            }, 1000);
+        })
+
+        function volver() {
+            window.location.href = ("");
+        }
     </script>
 
 </body>

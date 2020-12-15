@@ -138,10 +138,6 @@ function start() {
     })
 
 
-    
-
-
-
     capsule_3_line_3.addEventListener('ended', function(ev) {
             setTimeout(() => {next.classList.add('next_fade');
             next_deco.classList.add('next_fade');
@@ -154,6 +150,8 @@ function start() {
 
 
 function fnc_next() {
+    capsule_3_line_2.pause();
+    capsule_3_line_2_5.pause();
 
     next_1.classList.remove('next_fade')
     next_1_deco.classList.remove('next_fade')

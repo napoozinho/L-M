@@ -229,6 +229,8 @@ body, html {
     justify-content: space-around;
 }
 .titulo {
+    position: relative;
+    z-index: 3;
     font-family: 'Futura-CondensedExtraBold';
     font-size: 8vh;
     line-height: 8vh;
@@ -316,6 +318,7 @@ body, html {
     width: 60vh;
     right: -10vw;
     top: -14vh;
+    z-index: 1;
 }
 .marlboro {
     position: absolute;

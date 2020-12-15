@@ -207,7 +207,7 @@ body, html {
 }
 .c3_pack_1 {
     position: absolute;
-    width: 50vw;
+    width: 90vh;
     left: -50%;
     top: 50%;
     transform: translate(-50%, -25%);
@@ -216,7 +216,7 @@ body, html {
 }
 .c3_pack_2 {
     position: absolute;
-    width: 50vw;
+    width: 90vh;
     left: -50%;
     top: 50%;
     transform: translate(-50%, -25%);
@@ -225,7 +225,7 @@ body, html {
 }
 .c3_pack_3 {
     position: absolute;
-    width: 50vw;
+    width: 90vh;
     left: -50%;
     top: 50%;
     transform: translate(-50%, -25%);
@@ -238,8 +238,8 @@ body, html {
 .c3_titulo_1 {
     position: relative;
     width: 100%;
-    top:10%;
-    z-index: 5;
+    top:7%;
+    z-index: 6;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
@@ -418,7 +418,8 @@ body, html {
     z-index: 1;
     opacity: 0;
     width: 90%;
-    top: 47%;
+    /* top: 47%; */
+    top: 43%;
     left: 46%;
     transform: translate(-50%, -50%);
     transition: opacity 0.5s ease-in-out 0s;
@@ -443,7 +444,8 @@ body, html {
 .pack_lm {
     position: relative;
     z-index: 50;
-    width: 41vh;
+    /* width: 41vh; */
+    width: 38vh;
     margin-bottom: -2vh;
 }
 
@@ -459,7 +461,8 @@ body, html {
 .pack_red {
     position: relative;
     z-index: 40;
-    width: 37vh;
+    /* width: 37vh; */
+    width: 34vh;
     margin-bottom: -2vh;
 }
 
@@ -475,7 +478,8 @@ body, html {
 .pack_blue {
     position: relative;
     z-index: 30;
-    width: 36vh;
+    /* width: 36vh; */
+    width: 33vh;
     margin-bottom: -2vh;
 }
 .pack_entry {
@@ -490,8 +494,8 @@ body, html {
     margin-left: auto;
     margin-right: auto;
     font-family: 'Futura-CondensedExtraBold';
-    font-size: 4vh;
-    line-height: 4vh;
+    font-size: 3vh;
+    line-height: 3vh;
     color: #ffffff;
     text-shadow: 0px 0px 10px rgba(3, 24, 56, 0.527);
     opacity: 0;
@@ -506,8 +510,8 @@ body, html {
     margin-left: auto;
     margin-right: auto;
     font-family: 'Futura-CondensedExtraBold';
-    font-size: 4vh;
-    line-height: 4vh;
+    font-size: 3vh;
+    line-height: 3vh;
     color: #ffffff;
     text-shadow: 0px 0px 10px rgba(3, 24, 56, 0.527);
     opacity: 0;
@@ -522,8 +526,8 @@ body, html {
     margin-left: auto;
     margin-right: auto;
     font-family: 'Futura-CondensedExtraBold';
-    font-size: 4vh;
-    line-height: 4vh;
+    font-size: 3vh;
+    line-height: 3vh;
     color: #ffffff;
     text-shadow: 0px 0px 10px rgba(3, 24, 56, 0.527);
     opacity: 0;
@@ -536,7 +540,8 @@ body, html {
 }
 
 .c3_texto {
-    width: 30vw;
+    /* width: 30vw; */
+    width: 60vh;
     z-index: 5;
     margin-bottom: 15vh;
     opacity: 0;

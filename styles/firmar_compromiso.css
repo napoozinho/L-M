@@ -178,7 +178,7 @@ body, html {
     position: absolute;
     width: 70vh;
     margin: auto;
-    left: 50%;
+    left: 30%;
     top: 60%;
     transform: translate(-50%, -50%);
 }
@@ -186,7 +186,7 @@ body, html {
     position: absolute;
     width: 75vh;
     margin: auto;
-    left: 70%;
+    left: 50%;
     top: 80%;
     transform: translate(-50%, -50%);
     opacity: 0;
@@ -200,7 +200,7 @@ body, html {
     position: absolute;
     width: 28vh;
     margin: auto;
-    left: 55%;
+    left: 35%;
     top: 80%;
     transform: translate(-50%, -50%) rotateZ(0deg);
     opacity: 0;

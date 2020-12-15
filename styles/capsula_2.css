@@ -233,7 +233,8 @@ body, html {
     /* flex */
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    /* justify-content: space-around; */
+    justify-content: space-evenly;
 }
 .right_content_top {
     /* flex */
@@ -242,7 +243,7 @@ body, html {
     justify-content: space-around;
 }
 .c1_precio {
-    width: 23vh;
+    width: 19vh;
     margin-right: 50%;
     opacity: 0;
     transform: rotateZ(0deg);
@@ -272,8 +273,8 @@ body, html {
 }
 .titulo {
     font-family: 'Futura-CondensedExtraBold';
-    font-size: 12vh;
-    line-height: 10vh;
+    font-size: 11vh;
+    line-height: 7vh;
     color: #ffffff;
 }
 .titulo_animation_slide {
