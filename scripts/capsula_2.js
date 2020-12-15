@@ -1,4 +1,4 @@
-const ice_1 = document.getElementById('ice_1');
+// const ice_1 = document.getElementById('ice_1');
 const ice_2 = document.getElementById('ice_2');
 const capsule_2_line_1 = document.getElementById('capsule_2_line_1');
 const capsule_2_ended = document.getElementById('capsule_2_ended');
@@ -24,7 +24,6 @@ function start() {
         setTimeout(() => {
             cig.classList.add('c2_cig_animation_jump');
             ice_2.pause();
-            ice_2.currentTime = 0;
             ice_2.play();
             setTimeout(() => {
                 cig.classList.remove('c2_cig_animation_jump');
@@ -35,29 +34,31 @@ function start() {
         setTimeout(() => {
             descripcion_1.classList.add('descripcion_fade');
             setTimeout(() => {
+                titulo.classList.add('titulo_animation_slide')
                 descripcion_2.classList.add('descripcion_fade');
                 setTimeout(() => {
                     descripcion_3.classList.add('descripcion_fade');
                     setTimeout(() => {
-                        marlboro.classList.add('marlboro_animation_jump');
+                        titulo.classList.add('titulo_animation_slide')
+                        // marlboro.classList.add('marlboro_animation_jump');
                         setTimeout(() => {
                             next.classList.add('next_fade');
                             next_deco.classList.add('next_fade');
                         }, 1000);
-                    }, 7500);
+                    }, 1000);
                 }, 1000);
             }, 2500);
         }, 3000);
         
-        setTimeout(() => {
-            ice_1.pause();
-            ice_1.currentTime = 0;
-            ice_1.volume = 0.5;
-            ice_1.play();
-            setTimeout(() => {
-                titulo.classList.add('titulo_animation_slide')
-            }, 500);
-        }, 11000);
+        // setTimeout(() => {
+        //     ice_1.pause();
+        //     ice_1.currentTime = 0;
+        //     ice_1.volume = 0.5;
+        //     ice_1.play();
+        //     setTimeout(() => {
+        //         titulo.classList.add('titulo_animation_slide')
+        //     }, 500);
+        // }, 11000);
 
         capsule_2_line_1.addEventListener('ended', function(ev) {
             setTimeout(() => {

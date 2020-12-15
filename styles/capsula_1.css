@@ -177,6 +177,7 @@ body, html {
     justify-content: space-around;
 }
 .right_content_top {
+    margin-top: 5vh;
     /* flex */
     display: flex;
     flex-direction: row;
@@ -204,7 +205,7 @@ body, html {
     }
 }
 .c1_precio {
-    width: 35vh;
+    width: 25vh;
     transform: rotateZ(0deg);
     animation: precio_rotate 2s ease-in-out forwards 9s;
     /* flex */

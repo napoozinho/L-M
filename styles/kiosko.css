@@ -166,18 +166,25 @@ body, html {
 }
 
 .active {
-    filter: none !important;
+    /* filter: none !important; */
+    filter: brightness(100%);
     animation: hover 2s ease-in-out infinite;
 }
 @keyframes hover {
     0% {
+        filter: brightness(100%);
         transform: translateY(0px);
+        -webkit-filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.282));
     }
     50% {
+        filter: brightness(120%);
         transform: translateY(-10px);
+        -webkit-filter: drop-shadow(0px 0px 20px #88dfff);
     }
     100% {
+        filter: brightness(100%);
         transform: translateY(0px);
+        -webkit-filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.282));
     }
 }
 

@@ -603,3 +603,42 @@ body, html {
     flex-direction: column;
     justify-content: center;
 }
+
+
+
+
+/* next 1 start*/
+.next_1_cont {
+    position: absolute;
+    width: 27vh;
+    bottom: 15vh;
+    right: 2vh;
+    cursor: pointer;
+}
+.next_1_cont:hover .next_1{
+    filter: brightness(110%);
+}
+.next_1 {
+    position: absolute;
+    z-index: 9;
+    width: 27vh;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+.next_1_deco {
+    position: absolute;
+    z-index: 10;
+    width: 27vh;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    transform: scale(1);
+    filter: brightness(100%);
+    animation: next_deco_bright 2s ease-in-out infinite;
+}
+.next_fade {
+    opacity: 1 !important;
+}
+/* next 1 end*/
+.fade_out {
+    opacity: 0 !important;
+}
