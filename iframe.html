@@ -18,6 +18,14 @@
             // window.location.href = ("inicio.html");
             window.open('inicio.html', '_blank');
         }
+
+        function getMobileOperatingSystem() {
+            if( /iPhone|iPad|iPod/i.test(navigator.userAgent) ) {
+                document.getElementsByClassName('comenzar_text')[0].innerHTML = "Para una mejor experiencia, por favor ingresá desde un dispositivo con un sistema operativo distinto a iOS o desde tu computadora."
+                document.getElementById('btn').remove();
+            }
+        }
+        getMobileOperatingSystem();
     </script>
 </body>
 </html>
